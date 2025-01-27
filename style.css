@@ -51,7 +51,6 @@ nav ul li a {
 /* Hero Section */
 .hero {
     background: url('./assets/bg.jpg') no-repeat center center/cover;
-    background-opacity: 0.5 ;
     color: #fff;
     padding: 100px 0;
     text-align: center;
@@ -104,9 +103,24 @@ nav ul li a {
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgba(255, 218, 6, 0.56);
     transition: transform 0.3s ease;
     
+}
+
+.floating-element {
+    position: relative;
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Définir l'animation */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 
