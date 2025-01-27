@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chips Delight - Des chips savoureuses</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./logique.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="cursor-pointer">Chips Delight</h1>
+        <nav>
+          <ul>
+            <li>
+              <div class="menu">
+                <a  onmouseover="display('accueil_ligne')" onclick="scrollToV('accueil')">Accueil</a>
+                <div id="accueil_ligne" class="ligne"></div>
+              </div>
+            </li>
+            <li>
+              <div class="menu">
+                <a onmouseover="display('apropos_ligne')" onclick="scrollToV('apropos')">À Propos</a>
+                <div id="apropos_ligne" class="ligne"></div>
+              </div>
+            </li>
+            <li>
+                <a class="cta" onclick="scrollToV('produits')">Commander</a>
+            </li>
+
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Section acceuille -->
+    <section id="accueil" class="hero">
+      <div class="container">
+        <h2>Des chips croustillantes et savoureuses</h2>
+        <p>
+          Découvrez nos chips exceptionnelles, faites avec des ingrédients
+          naturels et locaux.
+        </p>
+        <a onclick="scrollToV('produits')" class="btn">Découvrir nos produits</a>
+      </div>
+    </section>
+
+    <!-- Section Produits -->
+    <section id="produits" class="produits">
+      <div class="container">
+        <h2>Nos Produits</h2>
+        <div class="produits-grid">
+          <div class="produit">
+            <img src="./assets/chips_longue.jpg" alt="Chips Classique" />
+            <h3>Chips Classique</h3>
+            <p>Le goût intemporel de nos chips traditionnelles.</p>
+          </div>
+          <div class="produit middle">
+            <img src="./assets/chips_longue.jpg" alt="Chips Barbecue" />
+            <h3>Chips Barbecue</h3>
+            <p>Une explosion de saveurs fumées et épicées.</p>
+          </div>
+          <div class="produit">
+            <img src="./assets/chips_longue.jpg" alt="Chips Fromage" />
+            <h3>Chips Fromage</h3>
+            <p>Un délice pour les amateurs de fromage.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section À Propos -->
+    <section id="apropos" class="apropos">
+      <div class="container">
+        <h2>À Propos de Nous</h2>
+        <p>
+          Chez Chips Delight, nous croyons en la qualité et au goût. Nos chips
+          sont fabriquées à partir de pommes de terre sélectionnées avec soin et
+          cuites dans de l'huile 100% naturelle. Nous nous engageons à offrir
+          une expérience gustative unique à nos clients.
+        </p>
+      </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contactez-nous</h2>
+        <form action="#" method="post">
+          <input type="text" name="name" placeholder="Votre nom" required />
+          <input type="email" name="email" placeholder="Votre email" required />
+          <textarea
+            name="message"
+            placeholder="Votre message"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Envoyer</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <p>&copy; 2023 Chips Delight. Tous droits réservés.</p>
+      </div>
+    </footer>
+  </body>
+</html>
