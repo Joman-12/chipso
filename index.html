@@ -38,6 +38,25 @@
         </nav>
       </div>
     </header>
+
+    <!-- Modal -->
+    <div id="modalProjet" class="modal">
+      <div class="modal-content">
+          <div class="modal-header">
+              <span class="close" onclick="closeModal()">&times;</span>
+              
+          </div>
+          <div class="group">
+            <label id="modalText">Qte de</label>
+            <input id="qte" type="number" name="qte" required />
+          </div>
+          <div class="modal-header">
+            <a class="modal_cmd">Commander</a>
+            
+          </div>
+      </div>
+  </div>
+
     <!-- Section acceuille -->
     <section id="accueil" class="hero">
       <div class="container">
@@ -59,16 +78,19 @@
             <img src="./assets/chips_longue.jpg" alt="Chips Classique" />
             <h3>Chips Classique</h3>
             <p>Le goût intemporel de nos chips traditionnelles.</p>
+            <a class="cmd" onclick="openCommande('Chips classique')">Commander</a>
           </div>
           <div class="produit floating-element middle">
             <img src="./assets/chips_longue.jpg" alt="Chips Barbecue" />
             <h3>Chips Barbecue</h3>
             <p>Une explosion de saveurs fumées et épicées.</p>
+            <a class="cmd" onclick="openCommande('Chips barbecue')">Commander</a>
           </div>
           <div class="produit">
             <img src="./assets/chips_longue.jpg" alt="Chips Fromage" />
             <h3>Chips Fromage</h3>
             <p>Un délice pour les amateurs de fromage.</p>
+            <a class="cmd" onclick="openCommande('Chips fromage')">Commander</a>
           </div>
         </div>
       </div>
@@ -110,5 +132,6 @@
         <p>&copy; 2023 Chips Delight. Tous droits réservés.</p>
       </div>
     </footer>
+
   </body>
 </html>
