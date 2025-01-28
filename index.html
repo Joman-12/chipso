@@ -44,15 +44,13 @@
       <div class="modal-content">
           <div class="modal-header">
               <span class="close" onclick="closeModal()">&times;</span>
-              
           </div>
           <div class="group">
             <label id="modalText">Qte de</label>
-            <input id="qte" type="number" name="qte" required />
+            <input id="qte" min="0" value="0" type="number" name="qte" required />
           </div>
           <div class="modal-header">
-            <a class="modal_cmd">Commander</a>
-            
+            <a class="modal_cmd" onclick="commander()">Commander</a>
           </div>
       </div>
   </div>
@@ -129,7 +127,7 @@
     <!-- Footer -->
     <footer>
       <div class="container">
-        <p>&copy; 2023 Chips Delight. Tous droits réservés.</p>
+        <p>&copy; 2024 Chips Delight. Tous droits réservés.</p>
       </div>
     </footer>
 
