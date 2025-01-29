@@ -51,7 +51,7 @@ nav ul li a {
 /* Style pour les téléphones (écrans <= 768px) */
 @media (max-width: 768px) {
     .hero{
-        background: url('./assets/bg.jpg') no-repeat center center/cover;
+        background: url('./assets/bg.svg') no-repeat center center/cover;
 
     }
   }
@@ -59,10 +59,10 @@ nav ul li a {
   /* Style pour les tablettes (écrans entre 769px et 1024px) */
   @media (min-width: 769px) and (max-width: 1024px) {
    .hero{
-    /*     background: url('./assets/bg.jpg') no-repeat center center/cover;
+    /*     background: url('./assets/bg.svg') no-repeat center center/cover;
  */
-  background-image: url("./assets/bg.jpg"),
-  /* Image en bas à gauche */ url("./assets/bg.jpg"); /* Image en bas à droite */
+  background-image: url("./assets/bg.svg"),
+  /* Image en bas à gauche */ url("./assets/bg.svg"); /* Image en bas à droite */
 background-position: left bottom,
   /* Position de la première image (bas à gauche) */ right bottom; /* Position de la deuxième image (bas à droite) */
 background-repeat: no-repeat,
@@ -74,10 +74,10 @@ background-size: auto 200px, auto 200px;
   /* Style pour les écrans plus grands (ex: desktop) */
   @media (min-width: 1025px) {
     .hero{
-        /*     background: url('./assets/bg.jpg') no-repeat center center/cover;
+        /*     background: url('./assets/bg.svg') no-repeat center center/cover;
  */
-background-image: url("./assets/bg.jpg"),
-  /* Image en bas à gauche */ url("./assets/bg.jpg"); /* Image en bas à droite */
+background-image: url("./assets/bg.svg"),
+  /* Image en bas à gauche */ url("./assets/bg.svg"); /* Image en bas à droite */
 background-position: left bottom,
   /* Position de la première image (bas à gauche) */ right bottom; /* Position de la deuxième image (bas à droite) */
 background-repeat: no-repeat,
@@ -151,7 +151,6 @@ li div a:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
   gap: 5px;
 }
 
@@ -175,8 +174,6 @@ li div a:hover{
   transform: translateY(-30px);
 }
 
-.produit:hover {
-}
 
 .produit img {
   width: 100%;
@@ -279,8 +276,6 @@ li div {
   cursor: pointer;
   background-color: #ffd700;
   width: fit-content;
-  position: absolute;
-  bottom: 5px;
 }
 
 .modal_cmd{
