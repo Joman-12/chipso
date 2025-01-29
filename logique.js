@@ -1,4 +1,27 @@
 let selectedProduct = ''
+
+function showMessage(type, message){
+    let modal = document.getElementById("message-modal");
+    let message_box = document.getElementById("message");
+    message_box.textContent == ''
+    modal.style.display = 'block'
+    if(type == 'ERROR'){
+        modal.style.backgroundColor = 'red'
+    }else if(type == 'SUCCESS'){
+        modal.style.backgroundColor = 'green'
+    }
+    message_box.textContent = message
+
+    setTimeout(() => {
+        closeMessage()
+    }, 4000);
+}
+
+function closeMessage(){
+    const modal = document.getElementById("message-modal");
+    modal.style.display = "none";
+}
+
 function scrollToV(id){
     document.getElementById(id).scrollIntoView(
         {
@@ -9,7 +32,7 @@ function scrollToV(id){
 }
 
 function display(id){
-    console.log(id);
+    //console.log(id);
     
 }
 
@@ -30,7 +53,15 @@ function openCommande(produit){
 
 function commander() {
     const qte = document.getElementById('qte').value
-    const message = `Bonjour. J'aimerais commander ${qte} boites de ${selectedProduct}`
+    let qteReelle = parseInt(qte)
+    console.log(qteReelle);
+    
+    if (isNaN(qteReelle) || qteReelle <= 0) {
+        showMessage('ERROR', 'Veuillez saisir un nombre supérieur à 0.')
+        return;
+    }
+    showMessage('SUCCESS', 'Votre commande a été enreigstrée.')
+    const message = `Bonjour. J'aimerais commander ${qteReelle} boites de ${selectedProduct}`
     // Formater le numéro en supprimant les espaces et les caractères non numériques
     const numeroFormatte = '+22870340735'
   
@@ -42,7 +73,7 @@ function commander() {
   
     // Ouvrir WhatsApp dans une nouvelle fenêtre ou onglet
     window.open(url, '_blank');
-  }
+}
 
 // Fonction pour fermer la modal
 function closeModal() {
@@ -57,3 +88,4 @@ window.onclick = function(event) {
         closeModal();
     }
 }
+
