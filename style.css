@@ -10,6 +10,7 @@ body {
   line-height: 1.6;
   color: #333;
   background-color: #f9f9f9;
+  width: 100%;
 }
 
 .container {
@@ -21,7 +22,8 @@ body {
 
 /* Header */
 header {
-  background-color: #ffd700; /* Jaune vif */
+  background-color: #ffd700;
+  /* Jaune vif */
   color: #333;
   padding: 20px 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -50,51 +52,56 @@ nav ul li a {
 
 /* Style pour les téléphones (écrans <= 768px) */
 @media (max-width: 768px) {
-    .hero{
-        background: url('./assets/bg.svg') no-repeat center center/cover;
+  .hero {
+    background: url('./assets/bg.svg') no-repeat center center/cover;
 
-    }
-
-    #message-modal{
-      display: none;
-      position: fixed;
-      z-index: 5;
-      right: 20px;
-      top: 10%;
-      max-width: 100%;
-      height: fit-content;
-      background-color: red;
-      border-radius: 5px;
-      padding: 10px;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-    
-    }
-  }
-  
-  /* Style pour les tablettes (écrans entre 769px et 1024px) */
-  @media (min-width: 769px) and (max-width: 1024px) {
-   .hero{
-    /*     background: url('./assets/bg.svg') no-repeat center center/cover;
- */
-  background-image: url("./assets/bg.svg"),
-  /* Image en bas à gauche */ url("./assets/bg.svg"); /* Image en bas à droite */
-background-position: left bottom,
-  /* Position de la première image (bas à gauche) */ right bottom; /* Position de la deuxième image (bas à droite) */
-background-repeat: no-repeat,
-  /* La première image ne se répète pas */ no-repeat; /* La deuxième image ne se répète pas */
-background-size: auto 200px, auto 200px;
-   }
   }
 
-  #message-modal{
+  #message-modal {
     display: none;
     position: fixed;
     z-index: 5;
     right: 20px;
-    top: 10%;
-    max-width: 30%;
+    top: 10px;
+    width: 80vw;
+    height: fit-content;
+    background-color: red;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+}
+
+/* Style pour les tablettes (écrans entre 769px et 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    /*     background: url('./assets/bg.svg') no-repeat center center/cover;
+ */
+    background-image: url("./assets/bg.svg"),
+      /* Image en bas à gauche */
+      url("./assets/bg.svg");
+    /* Image en bas à droite */
+    background-position: left bottom,
+      /* Position de la première image (bas à gauche) */
+      right bottom;
+    /* Position de la deuxième image (bas à droite) */
+    background-repeat: no-repeat,
+      /* La première image ne se répète pas */
+      no-repeat;
+    /* La deuxième image ne se répète pas */
+    background-size: auto 200px, auto 200px;
+  }
+
+  #message-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    right: 20px;
+    top: 10px;
+    width: 30%;
     height: fit-content;
     background-color: red;
     border-radius: 5px;
@@ -104,39 +111,48 @@ background-size: auto 200px, auto 200px;
     font-weight: bold;
   
   }
-  
-  /* Style pour les écrans plus grands (ex: desktop) */
-  @media (min-width: 1025px) {
-    .hero{
-        /*     background: url('./assets/bg.svg') no-repeat center center/cover;
- */
-background-image: url("./assets/bg.svg"),
-  /* Image en bas à gauche */ url("./assets/bg.svg"); /* Image en bas à droite */
-background-position: left bottom,
-  /* Position de la première image (bas à gauche) */ right bottom; /* Position de la deuxième image (bas à droite) */
-background-repeat: no-repeat,
-  /* La première image ne se répète pas */ no-repeat; /* La deuxième image ne se répète pas */
-background-size: auto 200px, auto 200px;
-    }
+}
 
-    #message-modal{
-      display: none;
-      position: fixed;
-      z-index: 5;
-      right: 20px;
-      top: 10%;
-      max-width: 30%;
-      height: fit-content;
-      background-color: red;
-      border-radius: 5px;
-      padding: 10px;
-      color: white;
-      font-size: 16px;
-      font-weight: bold;
-    
-    }
+
+
+/* Style pour les écrans plus grands (ex: desktop) */
+@media (min-width: 1025px) {
+  .hero {
+    /*     background: url('./assets/bg.svg') no-repeat center center/cover;
+ */
+    background-image: url("./assets/bg.svg"),
+      /* Image en bas à gauche */
+      url("./assets/bg.svg");
+    /* Image en bas à droite */
+    background-position: left bottom,
+      /* Position de la première image (bas à gauche) */
+      right bottom;
+    /* Position de la deuxième image (bas à droite) */
+    background-repeat: no-repeat,
+      /* La première image ne se répète pas */
+      no-repeat;
+    /* La deuxième image ne se répète pas */
+    background-size: auto 200px, auto 200px;
   }
-  
+
+  #message-modal {
+    display: none;
+    position: fixed;
+    z-index: 5;
+    right: 20px;
+    top: 10px;
+    width: 30%;
+    height: fit-content;
+    background-color: red;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+
+  }
+}
+
 
 .hero {
   color: #fff;
@@ -156,7 +172,8 @@ background-size: auto 200px, auto 200px;
 }
 
 .hero .btn {
-  background-color: #ffd700; /* Jaune vif */
+  background-color: #ffd700;
+  /* Jaune vif */
   color: #333;
   padding: 10px 20px;
   text-decoration: none;
@@ -166,10 +183,11 @@ background-size: auto 200px, auto 200px;
 }
 
 .hero .btn:hover {
-  background-color: #ffc300; /* Jaune plus foncé au survol */
+  background-color: #ffc300;
+  /* Jaune plus foncé au survol */
 }
 
-li div a:hover{
+li div a:hover {
   text-decoration: underline;
 }
 
@@ -212,10 +230,12 @@ li div a:hover{
 
 /* Définir l'animation */
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-20px);
   }
@@ -245,7 +265,8 @@ li div a:hover{
 
 /* À Propos Section */
 .apropos {
-  background-color: #ffd700; /* Jaune vif */
+  background-color: #ffd700;
+  /* Jaune vif */
   padding: 60px 0;
   text-align: center;
 }
@@ -320,7 +341,7 @@ li div {
   cursor: pointer;
 }
 
-.cmd{
+.cmd {
   box-shadow: 0px 0px 30px rgb(255, 255, 255);
   padding: 7px;
   border-radius: 10px;
@@ -329,7 +350,7 @@ li div {
   width: fit-content;
 }
 
-.modal_cmd{
+.modal_cmd {
   box-shadow: 0px 0px 30px rgb(255, 255, 255);
   padding: 7px;
   border-radius: 10px;
@@ -340,7 +361,8 @@ li div {
 }
 
 .contact .btn {
-  background-color: #ffd700; /* Jaune vif */
+  background-color: #ffd700;
+  /* Jaune vif */
   color: #333;
   padding: 10px 20px;
   border: none;
@@ -351,11 +373,14 @@ li div {
 }
 
 .contact .btn:hover {
-  background-color: #ffc300; /* Jaune plus foncé au survol */
+  background-color: #ffc300;
+  /* Jaune plus foncé au survol */
 }
+
 .btn {
   cursor: pointer;
 }
+
 /* Footer */
 footer {
   background-color: #ffc300;
@@ -396,7 +421,7 @@ footer p {
   gap: 10px;
 }
 
-.modal-header{
+.modal-header {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -418,7 +443,7 @@ footer p {
   text-decoration: none;
 }
 
-.group{
+.group {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -427,14 +452,14 @@ footer p {
   gap: 10px;
 }
 
-input{
+input {
   padding: 10px;
   border-radius: 5px;
   border-color: white
 }
 
 
-#message{
+#message {
   max-width: 100%;
   width: 100%;
   word-wrap: break-word;
